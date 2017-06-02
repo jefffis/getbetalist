@@ -57,7 +57,7 @@ a:active {
     z-index: 1;
     height: 30px;
     width: 30px;
-    background: white url(down.png) no-repeat center;
+    background: white url(images/down.png) no-repeat center;
     background-size: 14px;
     margin-top: -15px;
     margin-left: -15px;
@@ -105,7 +105,7 @@ a:active {
 
 #bl-mkt-main {
 	position: relative;
-	/*background: url(back-image.png) no-repeat top center;*/
+	/*background: url(images/back-image.png) no-repeat top center;*/
 	/*background-size: 900px;*/
 	/*padding-top: 400px;*/
 	/*max-width: 500px;
@@ -135,7 +135,7 @@ a:active {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background: url(back-image.png) no-repeat top center;
+	background: url(images/back-image.png) no-repeat top center;
 	background-size: 900px;
 	content: "";
 }
@@ -224,7 +224,7 @@ a:active {
 	opacity: 0;
 	height: 1rem;
 	width: 1rem;
-	background: url(checkmark--green.png) no-repeat center;
+	background: url(images/checkmark--green.png) no-repeat center;
 	background-size: 16px;
 	margin-top: -.45rem;
 	content: "";
@@ -491,6 +491,16 @@ a:active {
 /*#bl-mkt-demo a {
 	color: #05b2e0;
 }*/
+
+#bl-mkt-footer {
+	background: #07526F;
+	padding: 3rem 0;
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+#bl-mkt-footer a {
+	color: inherit;
+}
 
 @media screen and (max-width: 560px) {
 	#bl-mkt-header {
