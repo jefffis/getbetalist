@@ -45,7 +45,6 @@
 								<input type="email" id="bl-mkt-email" name="EMAIL" />
 							</label>
 							<button id="bl-mkt-submit">
-								<!-- Create my list -->
 								Get early access
 							</button>
 						</fieldset>
@@ -56,9 +55,6 @@
 		<div id="bl-mkt-more-wrapper">
 			<h2>
 				How does betalist work exactly?
-				<!-- <span>
-					Sign up and start collecting customers.
-				</span> -->
 			</h2>
 			<ul>
 				<li>
@@ -195,17 +191,7 @@
 				return re.test(email);
 			}
 			function goForth() {
-				// var blForm = document.getElementById('bl-mkt-form'),
-				// 	blData = new FormData(blForm);
-				// console.log(blData);
-				// var blFormData = {'email_address': document.getElementById('bl-mkt-email').value};
-				// console.log(blFormData);
-				// var request = new XMLHttpRequest();
-				// request.open('POST', 'http://jefff.us5.list-manage.com/subscribe/post-json?u=04a55f946b24b93da6e1e6fbe&amp;id=b8001196ab', true);
-				// request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-				// request.send(blFormData);
 				document.getElementById('bl-mkt-form').submit();
-				// showSuccess();
 			}
 			function showSuccess(isSubscribed) {
 				var blForm = document.getElementById('bl-mkt-form'),
@@ -219,14 +205,8 @@
 					document.getElementById('bl-mkt-subscribed').style.display = 'none';
 				}
 				blSuccess.classList.add('is-shown');
-				// fadeInSuccess(blSuccess);
 				adjustBottomCta();
 			}
-			// function fadeInSuccess(element) {
-			// 	setTimeout(function() {
-			// 		element.classList.add('is-transitioning');
-			// 	}, 251);
-			// }
 			function adjustBottomCta() {
 				var blBottomCta = document.getElementById('bl-mkt-submit-btn');
 
@@ -246,7 +226,6 @@
 			if(getUrlParameter('confirmedToo')) {
 				showSuccess(false);
 			}
-			// goForth();
 		</script>
 		<script async src="fonts.js"></script>
 		<script async src="appDemo.js"></script>
