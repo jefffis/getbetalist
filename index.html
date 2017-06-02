@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>betalist: create &amp; grow a user testing list to get actionable insights from real customers.</title>
+		<link rel="stylesheet" href="home.css" />
+		<link rel="shortcut icon" href="logo--bug.png" type="image/x-icon" />
+		<link rel="icon" href="logo--bug.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div id="bl-mkt-intro-container" class="bl-mkt-scroll-more">
+			<div id="bl-mkt-form--submitted">
+				<h3 id="bl-mkt-subscribed">
+					Awesome, you&rsquo;re on the list!
+					<span>
+						Look for an email from <u>Jeff @ betalist</u>.
+					</span>
+				</h3>
+				<h3 id="bl-mkt-confirmed">
+					Thank you for your interest!
+					<span>
+						We&rsquo;ll be in touch soon.
+					</span>
+				</h3>
+			</div>
+			<header id="bl-mkt-header">
+				<img src="logo.png" id="bl-mkt-logo" alt="betalist logo" />
+			</header>
+			<div id="bl-mkt-main">
+				<h1 id="bl-mkt-main-header">
+					Why do user testing <span class="bl-mkt-br"></span> without YOUR customers?	
+				</h1>
+				<p id="bl-mkt-main-sub">
+					Create &amp; grow your user testing list to get <span class="bl-mkt-br"></span> actionable insights from real customers.
+				</p>
+				<div id="bl-mkt-form-wrapper">
+					<form action="//jefff.us5.list-manage.com/subscribe/post?u=04a55f946b24b93da6e1e6fbe&amp;id=b8001196ab" method="post" id="bl-mkt-form">
+						<fieldset>
+							<label for="bl-mkt-email" id="bl-mkt-email-title">
+								Enter your email for early access
+							</label>
+							<label for="bl-mkt-email" id="bl-mkt-email-lbl">
+								<input type="email" id="bl-mkt-email" name="EMAIL" />
+							</label>
+							<button id="bl-mkt-submit">
+								<!-- Create my list -->
+								Get early access
+							</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="bl-mkt-more-wrapper">
+			<h2>
+				How does betalist work exactly?
+				<!-- <span>
+					Sign up and start collecting customers.
+				</span> -->
+			</h2>
+			<ul>
+				<li>
+					<img src="icons/create.png" />
+					Create your betalist
+					<small>Sign up &amp; name your list</small></li>
+				<li>
+					<img src="icons/embed.png" />
+					Embed on your site
+					<small>Copy &amp; paste on any page</small></li>
+				<li>
+					<img src="icons/test.png" />
+					Test with your users
+					<small>Get valuable feedback</small></li>
+				<li>
+					<img src="icons/happy.png" />
+					Build better products
+					<small>Make more money</small></li>
+			</ul>
+			<hr />
+			<h2>
+				What does it look to a customer?
+				<span>
+					Click each logo to see an example on that site.
+				</span>
+			</h2>
+			<div id="bl-mkt-examples">
+				<a href="../amazon.gif">
+					<img src="logos/amazon.png" />
+				</a>
+				<a href="../yelp.gif">
+					<img src="logos/yelp.png" />
+				</a>
+				<a href="../etsy.gif">
+					<img src="logos/etsy.png" />
+				</a>
+				<a href="../stack.gif">
+					<img src="logos/stack.png" />
+				</a>
+			</div>
+			<p id="bl-mkt-demo">
+				<a href="javascript:showModal();">See it in action</a> on this site.
+			</p>
+			<div id="bl-mkt-more-cta-wrapper" class="bl-mkt-scroll-more--top">
+				<p id="bl-mkt-more-info">
+					Want to start getting actionable insights &amp; feedback from your customers?
+				</p>
+				<a href="#bl-mkt-main-sub" id="bl-mkt-submit-btn">
+					Sign up for early access
+				</a>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("touchstart", function() {},false);
+			var emailHasError = false,
+				emailHasContent = false;
+			document.getElementById('bl-mkt-submit-btn').onclick = function(e) {
+				setTimeout(function() {
+					document.getElementById('bl-mkt-email').focus();
+				}, 0);
+			}
+			document.getElementById('bl-mkt-email').onkeyup = function() {
+				// if input empty, still support initial correct entry
+				if(!emailHasContent) {
+					if(this.value !== '' && validateEmail(this.value)) {
+						handleErrorUI(this, true);
+					} else {
+						return;
+					}
+				}
+				if(!validateEmail(this.value)) {
+					handleErrorUI(this, false);
+					return;
+				}
+				handleErrorUI(this, true);
+			}
+			document.getElementById('bl-mkt-email').onblur = function() {
+				if(this.value !== '') {
+					emailHasContent = true;
+				} else {
+					return;
+				}
+				if(!validateEmail(this.value)) {
+					handleErrorUI(this, false);
+					return;
+				}
+				handleErrorUI(this, true);
+			}
+			document.getElementById('bl-mkt-submit').onclick = function(e) {
+				e.preventDefault();
+				if(!validateEmail(document.getElementById('bl-mkt-email').value)) {
+					handleErrorUI(document.getElementById('bl-mkt-email'), false);
+					return;
+				}
+				handleErrorUI(document.getElementById('bl-mkt-email'), true);
+				this.classList.add('is-submitted');
+				this.setAttribute('disabled', 'true');
+				goForth();
+			}
+			document.getElementById('bl-mkt-form').onsubmit = function(e) {
+				e.preventDefault();
+				if(!validateEmail(document.getElementById('bl-mkt-email').value)) {
+					handleErrorUI(document.getElementById('bl-mkt-email'), false);
+					return;
+				}
+				handleErrorUI(document.getElementById('bl-mkt-email'), true);
+				goForth();
+			}
+			function handleErrorUI(element, isValid) {
+				setTimeout(function() {
+					console.log(isValid);
+					if(isValid) {
+						var error = element.parentNode.querySelector('.bl-mkt-micro--error'),
+							label = element.parentNode;
+						emailHasError = false;
+						element.classList.remove('bl-mkt-input--error');
+						if(error) error.parentNode.removeChild(error);
+						label.classList.add('bl-mkt-input--good');
+					} else {
+						if(emailHasError) return;
+						emailHasError = true;
+						var error = document.createElement('small'),
+							label = element.parentNode;
+						error.setAttribute('class', 'bl-mkt-micro bl-mkt-micro--error');
+						error.innerText = 'Please enter a valid email.';
+						element.classList.add('bl-mkt-input--error');
+						element.parentNode.appendChild(error); // TODO, make more robust
+						label.classList.remove('bl-mkt-input--good');
+					}
+				}, 225)
+			}
+			function validateEmail(email) { 
+				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				return re.test(email);
+			}
+			function goForth() {
+				// var blForm = document.getElementById('bl-mkt-form'),
+				// 	blData = new FormData(blForm);
+				// console.log(blData);
+				// var blFormData = {'email_address': document.getElementById('bl-mkt-email').value};
+				// console.log(blFormData);
+				// var request = new XMLHttpRequest();
+				// request.open('POST', 'http://jefff.us5.list-manage.com/subscribe/post-json?u=04a55f946b24b93da6e1e6fbe&amp;id=b8001196ab', true);
+				// request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+				// request.send(blFormData);
+				document.getElementById('bl-mkt-form').submit();
+				// showSuccess();
+			}
+			function showSuccess(isSubscribed) {
+				var blForm = document.getElementById('bl-mkt-form'),
+					blFormWrapper = blForm.parentNode,
+					blSuccess = document.getElementById('bl-mkt-form--submitted');
+
+				blFormWrapper.removeChild(blForm);
+				if(isSubscribed) {
+					document.getElementById('bl-mkt-confirmed').style.display = 'none';
+				} else {
+					document.getElementById('bl-mkt-subscribed').style.display = 'none';
+				}
+				blSuccess.classList.add('is-shown');
+				// fadeInSuccess(blSuccess);
+				adjustBottomCta();
+			}
+			// function fadeInSuccess(element) {
+			// 	setTimeout(function() {
+			// 		element.classList.add('is-transitioning');
+			// 	}, 251);
+			// }
+			function adjustBottomCta() {
+				var blBottomCta = document.getElementById('bl-mkt-submit-btn');
+
+				blBottomCta.parentNode.removeChild(blBottomCta);
+				document.getElementById('bl-mkt-more-info').style.marginBottom = '0';
+				document.getElementById('bl-mkt-more-info').innerHTML = 'Thanks again for your interest! We&rsquo;ll be in touch soon.';
+			}
+			function getUrlParameter(name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			}
+			if(getUrlParameter('signedUp')) {
+				showSuccess(true);
+			}
+			if(getUrlParameter('confirmedToo')) {
+				showSuccess(false);
+			}
+			// goForth();
+		</script>
+		<script async src="fonts.js"></script>
+		<script async src="appDemo.js"></script>
+	</body>
+</html>

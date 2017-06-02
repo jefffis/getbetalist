@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'franklingothic-book';
+    src: url('fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('fonts/franklingothic-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'franklingothic-demi';
+    src: url('fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('fonts/franklingothic-demi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html {
+	font: normal 100%/1.2 'franklingothic-book', 'Helvetica', Arial, sans-serif;
+}
+
+a {
+	color: #32C9F1;
+}
+a:hover {
+	text-decoration: none;
+}
+h1, h2, h3, strong, b, th {
+	font-weight: normal;
+	font-family: 'franklingothic-demi', 'Helvetica', Arial, sans-serif;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+#bl-app-header {
+	background: #32C9F1;
+}
+#bl-app-logo {
+	display: block;
+	float: left;
+	width: 30px;
+	margin-left: .5rem;
+	padding: 1.5rem;
+	/*border-right: 2px solid white;*/
+}
+#bl-app-logo img {
+	display: block;
+	max-width: 30px;
+}
+#bl-app-nav {
+	float: left;
+	max-height: 78px;
+	/*max-width: 1200px;*/
+	width: calc(100% - (50px + .5rem));
+	padding-left: 2.5rem;
+}
+.bl-app-nav-link {
+	display: inline-block;
+	max-height: 78px;
+	padding: 1.5rem 1.75rem;
+	color: white;
+	font-size: 20px;
+	line-height: 1.6;
+	text-decoration: none;
+}
+.bl-app-nav-link:hover {
+	background: #15A7CE;
+}
+.bl-app-nav-link--active,
+.bl-app-nav-link--active:hover {
+	background: white;
+	color: #777;
+	font-family: 'franklingothic-demi', 'Helvetica', Arial, sans-serif;
+}
+#bl-app-nav-account {
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-right: 1rem;
+	padding: 1.5rem 2rem 1.5rem 4.5rem;
+	/*border-left: 2px solid;*/
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 1.6;
+}
+#bl-app-nav-account:before {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 2rem;
+	height: 1.5em;
+	width: 1.5em;
+	background: white url(user.jpg) no-repeat center;
+	background-size: cover;
+	margin-top: -1rem;
+	border-radius: 3px;
+	content: "";
+}
+#bl-app-nav-account img {
+	display: inline-block;
+	max-width: 30px;
+	margin: 0;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+#bl-app-account {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	background: white;
+	margin-top: -4px;
+	padding: 1rem 1.5rem;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 0 0 2px #15A7CE inset, 1px 3px 0 rgba(0,0,0,0.075);
+}
+#bl-app-nav-account:hover {
+	background: #15A7CE;
+}
+#bl-app-nav-account:hover #bl-app-account {
+	display: block;
+}
+.bl-app-account-link {
+	display: block;
+	padding: .5rem 0;
+	color: #111;
+	text-decoration: none;
+}
+.bl-app-account-link:last-child {
+	margin-top: 1rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #ccc;
+}
+
+
+
+#bl-app-container {
+	max-width: 1200px;
+	margin: auto;
+	padding: 3rem 1.5rem;
+	font-size: 18px;
+}
+#bl-app-container h1 {
+	/*margin-left: -3rem;
+	margin-right: -3rem;*/
+	/*margin-bottom: 1.5rem;*/
+	/*padding-left: 3rem;
+	padding-right: 3rem;*/
+	padding-bottom: .5rem;
+	border-bottom: 2px solid #ddd;
+	font-weight: normal;
+}
+
+#bl-app-success-msg {
+	background: #E8FFEC;
+	margin-bottom: 3rem;
+	padding: 2.5rem;
+	border: 1px solid #00D921;
+	border-radius: 3px;
+	/*box-shadow: 0 0 0 2px rgba(0,0,0,0.025) inset;*/
+	/*color: #07941D;*/
+	/*font-size: 18px;*/
+	/*line-height: 1;*/
+	text-align: center;
+}
+#bl-app-success-msg img {
+	display: block;
+	max-width: 100px;
+	margin: 1rem auto 1.5rem;
+}
+
+#bl-app-no-subscribers {
+	display: none;
+	margin-top: 3rem;
+}
+#bl-app-no-subscribers ul {
+	margin: 1.5rem 0;
+	padding-left: 1rem;
+}
+#bl-app-no-subscribers li:nth-child(n+2) {
+	margin-top: .75rem;
+}
+.bl-mkt-textarea--read-only {
+	display: block;
+	height: 10rem;
+	width: 100%;
+	outline: none;
+	background: #efefef;
+	margin-top: 10px;
+	padding: 10px;
+	/*border: 1px solid #ccc;*/
+	border-radius: 3px;
+	font-family: monospace;
+	font-size: 14px;
+	resize: none;
+}
+/*.bl-mkt-textarea--read-only:focus {
+	border-color: #07526F;
+	box-shadow: 0 0 0 1px #07526F, 0 0 0 3px rgba(0,0,0,0.075);
+}*/
+
+#bl-app-settings {
+	display: inline-block;
+	position: relative;
+	float: right;
+	padding-top: 1.15em;
+	padding-right: 1.5rem;
+	color: #777;
+	cursor: pointer;
+	font-family: 'franklingothic-book', 'Helvetica', Arial, sans-serif;
+	font-size: 16px;
+}
+#bl-app-settings:after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	height: 1rem;
+	width: 1rem;
+	/*background: #ddd;*/
+	/*margin-top: -.1rem;*/
+	border: 1px solid #ddd;
+	border-radius: 100%;
+	content: "";
+}
+#bl-app-settings-actions {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: white;
+	margin-top: -4px;
+	padding: 1rem 1.5rem;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 0 0 2px #15A7CE inset, 1px 3px 0 rgba(0,0,0,0.075);
+}
+/*#bl-app-nav-account:hover {
+	background: #15A7CE;
+}*/
+/*#bl-app-settings:hover #bl-app-settings-actions {
+	display: block;
+}*/
+
+
+#bl-app-table {
+	width: 100%;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+#bl-app-table th {
+	background: #efefef;
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+}
+#bl-app-table td {
+	padding: 1rem;
+	border-bottom: 1px solid #ddd;
+}
+.bl-app-sample {
+	position: relative;
+}
+.bl-app-sample:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: .5;
+	height: 100%;
+	width: 100%;
+	background: white;
+	content: "";
+}
+.bl-app-sample td {
+	color: #777;
+}
+#bl-app-table-micro {
+	display: block;
+	margin-top: 1.5rem;
+	/*background: #777;
+	color: white;*/
+}
+
+
+
+@media screen and (min-width: 1200px) {
+	/*#bl-app-container h1 {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}*/
+	#bl-app-container {
+		padding: 3rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

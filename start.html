@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create your betalist account.</title>
+		<link rel="stylesheet" href="start.css" />
+	</head>
+	<body>
+		<header id="bl-mkt-header">
+			<img src="logo.png" id="bl-mkt-logo" alt="betalist logo" />
+			<a href="###" id="bl-mkt-login">Log In</a>
+		</header>
+		<div id="bl-mkt-main-form">
+			<div id="bl-mkt-main-form-content">
+				<h3>
+					<strong>Step 2</strong> of 4
+				</h3>
+				<div id="bl-mkt-progress-bar">
+					<span id="bl-mkt-progress" style="width: 25%;"></span>
+				</div>
+				<h1 id="bl-mkt-form-header">Create your account</h1>
+				<form action="POST" id="bl-mkt-form">
+					<fieldset>
+						<label class="bl-mkt-field">
+							Your business email
+							<input type="email" id="bl-mkt-email" name="bl-mkt-email" value="" class="bl-mkt-input" />
+						</label>
+						<hr class="bl-mkt-hr" />
+						<label class="bl-mkt-field">
+							Enter a password
+							<input type="password" id="bl-mkt-password" name="bl-mkt-password" value="" class="bl-mkt-input bl-mkt-input--error" />
+							<small class="bl-mkt-micro bl-mkt-micro--error">Please enter a password</small>
+							<small class="bl-mkt-micro">At least 6 characters long</small>
+						</label>
+						<hr class="bl-mkt-hr" />
+						<button id="bl-mkt-submit">
+							Continue
+						</button>
+						<small class="bl-mkt-micro">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</small>
+					</fieldset>
+				</form>
+			</div>
+			<aside id="bl-mkt-main-form-aside">
+				<h2>Why create a betalist?</h2>
+				<ul>
+					<li>User testing without your actual customers is pointless</li>
+					<li>Recruiting your customers for user testing is time-consuming</li>
+					<li>Giving your customers more visibility into your product is priceless</li>
+				</ul>
+			</aside>
+		</div>
+		<script>
+			function getUrlParameter(name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			}
+			if(getUrlParameter('email')) {
+				document.getElementById('bl-mkt-email').value = getUrlParameter('email');
+			} else {
+				document.getElementById('bl-mkt-email').focus();
+			}
+			document.addEventListener("touchstart", function() {},false);
+			document.getElementById('bl-mkt-submit').onclick = function(e) {
+				e.preventDefault();
+				if(!validateEmail(document.getElementById('bl-mkt-email').value)) {
+					handleErrorUI(document.getElementById('bl-mkt-email'), false);
+					return;
+				}
+				handleErrorUI(document.getElementById('bl-mkt-email'), true);
+				this.classList.add('is-submitted');
+				this.setAttribute('disabled', 'true');
+				goForth();
+			}
+			document.getElementById('bl-mkt-form').onsubmit = function(e) {
+				e.preventDefault();
+				if(!validateEmail(document.getElementById('bl-mkt-email').value)) {
+					handleErrorUI(document.getElementById('bl-mkt-email'), false);
+					return;
+				}
+				handleErrorUI(document.getElementById('bl-mkt-email'), true);
+				goForth();
+			}
+			function handleErrorUI(element, isValid) {
+				if(isValid) {
+					var error = element.parentNode.querySelector('.bl-mkt-micro--error');
+					if(!error) return;
+					element.classList.remove('bl-mkt-input--error');
+					error.parentNode.removeChild(error);
+				} else {
+					var error = document.createElement('small');
+					error.setAttribute('class', 'bl-mkt-micro bl-mkt-micro--error');
+					error.innerText = 'Please enter a valid business email';
+					element.classList.add('bl-mkt-input--error');
+					element.focus();
+					element.parentNode.appendChild(error); // TODO, make more robust
+				}
+			}
+			function validateEmail(email) { 
+				var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				return re.test(email);
+			}
+			function goForth() {
+				setTimeout(function() {
+					window.location.href = 'step3.html' + (document.getElementById('bl-mkt-email').value !== '' ? '?email=' + document.getElementById('bl-mkt-email').value : '');
+				}, 1000);
+			}
+		</script>
+
+	</body>
+</html>
