@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'franklingothic';
-    src: url('fonts/franklingothic-book-webfont.woff2') format('woff2'),
-         url('fonts/franklingothic-book-webfont.woff') format('woff');
+    src: url('../fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'franklingothic';
-    src: url('fonts/franklingothic-demi-webfont.woff2') format('woff2'),
-         url('fonts/franklingothic-demi-webfont.woff') format('woff');
+    src: url('../fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-demi-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -21,7 +21,7 @@
 }
 html {
 	color: #111;
-	font: normal 100%/1.2 'Helvetica', Arial, sans-serif;
+	font: normal 100%/1.5 'Helvetica', Arial, sans-serif;
 }
 .fonts-loaded {
 	font-family: 'franklingothic', 'Helvetica', Arial, sans-serif;
@@ -39,10 +39,9 @@ a:hover {
 a:active {
 	opacity: .65;
 }
-/*strong {
-	font-family: 'franklingothic-demi', 'Helvetica', Arial, sans-serif;
-	font-weight: normal;
-}*/
+h1, h2, h3 {
+	line-height: 1.2;
+}
 
 .bl-mkt-scroll-more, 
 .bl-mkt-scroll-more--top {
@@ -57,7 +56,7 @@ a:active {
     z-index: 1;
     height: 30px;
     width: 30px;
-    background: white url(images/down.png) no-repeat center;
+    background: white url(../images/down.png) no-repeat center;
     background-size: 14px;
     margin-top: -15px;
     margin-left: -15px;
@@ -105,7 +104,7 @@ a:active {
 
 #bl-mkt-main {
 	position: relative;
-	/*background: url(images/back-image.png) no-repeat top center;*/
+	/*background: url(../images/back-image.png) no-repeat top center;*/
 	/*background-size: 900px;*/
 	/*padding-top: 400px;*/
 	/*max-width: 500px;
@@ -135,7 +134,7 @@ a:active {
 	z-index: 1;
 	height: 100%;
 	width: 100%;
-	background: url(images/back-image.png) no-repeat top center;
+	background: url(../images/back-image.png) no-repeat top center;
 	background-size: 900px;
 	content: "";
 }
@@ -224,7 +223,7 @@ a:active {
 	opacity: 0;
 	height: 1rem;
 	width: 1rem;
-	background: url(images/checkmark--green.png) no-repeat center;
+	background: url(../images/checkmark--green.png) no-repeat center;
 	background-size: 16px;
 	margin-top: -.45rem;
 	content: "";
@@ -360,10 +359,43 @@ a:active {
 	text-align: center;
 }*/
 
+#bl-mkt-why {
+	background: #07526F;
+	padding: 8rem 0;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+#bl-mkt-why h2,
+#bl-mkt-why p {
+	max-width: 450px;
+}
+#bl-mkt-why h2 {
+	margin: auto auto 1.5rem;
+}
+#bl-mkt-why p {
+	margin: auto;
+	/*text-align: left;*/
+}
+#bl-mkt-why p:nth-of-type(n+2) {
+	margin-top: 1rem;
+}
+#bl-mkt-why strong {
+	/*display: inline-block;
+	background: #F8FAC5;
+	padding: 3px 6px;
+	color: #111;
+	font-weight: normal;*/
+	/*border-bottom: 2px dotted;*/
+	color: #F2EF83;
+	/*font-weight: normal;*/
+}
+
 #bl-mkt-more-wrapper {
 	padding: 3rem 1.5rem 0;
 }
 #bl-mkt-more-wrapper h2 {
+	margin-top: 1rem;
 	margin-bottom: 2.5rem;
 	/*color: #07526F;*/
 	font-size: 30px;
@@ -558,6 +590,10 @@ a:active {
 	/*#bl-mkt-more-wrapper {
 		position: static;
 	}*/
+	#bl-mkt-why {
+		padding: 5rem 1.5rem;
+		text-align: left;
+	}
 	#bl-mkt-more {
 		/*display: block;
 		margin-bottom: 1.5rem;
