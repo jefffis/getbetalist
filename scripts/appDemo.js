@@ -109,7 +109,7 @@ blLearnMoreBackButton.id = 'bl-back-link';
 blLearnMoreBackButton.innerText = 'Go back';
 blLearnMoreBackButton.href = '###';
 blLearnMoreVideo.id = 'bl-learn-more-holder';
-blLearnMoreVideo.innerHTML = '<div id="bl-learn-more-title"><!--We want help making betalist better for you.-->Join our beta-testing list and make betalist better for you.</div><div class="bl-learn-more-content">By joining our this list, you&rsquo;ll have the opportunity to take part by:</div><div class="bl-learn-more-content">&bull; accessing early features &amp; prototypes</div><div class="bl-learn-more-content">&bull; giving detailed feedback on existing features</div><div class="bl-learn-more-content">&bull; helping define the product roadmap</div><div class="bl-learn-more-content">Choose what you want to help us out with. Unsubscribe anytime.</div>';
+blLearnMoreVideo.innerHTML = '<div id="bl-learn-more-title"><!--We want help making betalist better for you.-->Sign up and help make betalist better for you.</div><div class="bl-learn-more-content">By joining our list, you&rsquo;ll have the opportunity to take part by:</div><div class="bl-learn-more-content">&bull; accessing early features &amp; prototypes</div><div class="bl-learn-more-content">&bull; giving detailed feedback on existing features</div><div class="bl-learn-more-content">&bull; helping define the product roadmap</div><div class="bl-learn-more-content">Choose what you want to help us out with. Unsubscribe anytime.</div>';
 // blLearnMoreVideoIframe.src = 'https://www.youtube.com/embed/eNsKlhGJ3p0?showinfo=0&wmode=transparent&rel=0';
 // blLearnMoreVideoIframe.frameBorder = '0';
 // add to parent els
