@@ -82,21 +82,24 @@ h1, h2, h3 {
 }
 #bl-mkt-login {
 	display: inline-block;
-	position: absolute;
+	position: fixed;
 	top: 2rem;
 	right: 2rem;
 	z-index: 4;
-	background: rgba(0,0,0,0.05);
+	background: #05b2e0;
 	padding: .75rem 1.25rem;
-	border: 1px solid #1BA9D0;
+	border: 1px solid #0287AB;
 	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 	color: white;
 	line-height: 1;
 	text-decoration: none;
 }
 #bl-mkt-login:active {
-	background: rgba(0,0,0,0.075);
+	background: #029CC4;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
 	color: rgba(255,255,255,0.75);
+	opacity: 1;
 }
 /*#bl-mkt-login:focus {
 	border-color: #1397BB;
@@ -546,8 +549,12 @@ h1, h2, h3 {
 		margin: 0;
 	}
 	#bl-mkt-login {
+		position: absolute;
 		top: 1.5rem;
 		right: 1.5rem;
+		/*background: none;*/
+		/*box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) inset;*/
+		font-weight: bold;
 	}
 	#bl-mkt-main {
 		padding: 0 1.5rem;
