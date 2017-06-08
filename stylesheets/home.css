@@ -90,10 +90,12 @@ h1, h2, h3 {
 	padding: .75rem 1.25rem;
 	border: 1px solid #0287AB;
 	border-radius: 3px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 	color: white;
+	/*font-weight: bold;*/
 	line-height: 1;
 	text-decoration: none;
+	/*animation: shake .25s ease-in-out;*/
 }
 #bl-mkt-login:active {
 	background: #029CC4;
@@ -285,8 +287,10 @@ h1, h2, h3 {
 	width: calc(40% - .5rem);
 	outline: none;
 	background: #07526F; /*02356f*/
+	/*background: #F4610B;*/
 	padding: 1rem 1.25rem;
 	border-radius: 3px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 	color: white;
 	cursor: pointer;
 	font-family: inherit;
@@ -297,6 +301,7 @@ h1, h2, h3 {
 }
 #bl-mkt-submit:active {
 	background: #043B4F;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
 	color: rgba(255,255,255,0.75);
 }
 #bl-mkt-submit:before,
@@ -506,8 +511,9 @@ h1, h2, h3 {
 #bl-mkt-submit-btn {
 	display: block;
 	background: #F4610B;
-	padding: 1rem 1.25rem;
+	padding: .85rem 1.25rem;
 	border-radius: 3px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
 	color: white;
 	cursor: pointer;
 	font-family: inherit;
@@ -517,6 +523,8 @@ h1, h2, h3 {
 }
 #bl-mkt-submit-btn:active {
 	background: #E05809;
+	opacity: 1;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
 	color: rgba(255,255,255,0.75);
 }
 #bl-mkt-demo {
@@ -865,3 +873,11 @@ h1, h2, h3 {
 		transform: rotate(360deg);
 	}
 }
+/*@keyframes shake {
+	0% {
+		transform: rotate(-.5deg);
+	}
+	100% {
+		transform: rotate(.5deg);
+	}
+}*/
