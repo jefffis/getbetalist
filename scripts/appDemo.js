@@ -10,6 +10,7 @@ var blBody = document.getElementsByTagName('body')[0],
 	blIntroContent = document.createElement('div'),
 	blModalTitle = document.createElement('div'),
 	blModalTitleLogo = document.createElement('img'),
+	blModalTitleContentDemo = document.createElement('div'),
 	blModalTitleContent = document.createElement('div'),
 	blModalTitleSmall = document.createElement('small'),
 	blLearnMoreLink = document.createElement('a'),
@@ -67,6 +68,8 @@ blIntroContent.id = 'bl-intro-content';
 blModalTitleLogo.id = 'bl-logo';
 blModalTitleLogo.setAttribute('data-src', 'http://wtf.jefff.co/betalist/placeholder--logo.png');
 blModalTitle.id = 'bl-modal-title';
+blModalTitleContentDemo.id = 'bl-modal-title-content--demo';
+blModalTitleContentDemo.innerText = 'Demo: this is how your customers will see betalist.';
 blModalTitleContent.id = 'bl-modal-title-content';
 blModalTitleContent.innerText = 'We want you to help us improve betalist.';
 blModalTitleSmall.id = 'bl-modal-title-micro';
@@ -76,7 +79,7 @@ blLearnMoreLink.innerText = 'What is this?';
 blLearnMoreLink.href = '###';
 // add to parent els
 blModalTitleSmall.appendChild(blLearnMoreLink);
-// blModalTitle.appendChild(blModalTitleLogo);
+blModalTitle.appendChild(blModalTitleContentDemo); // just for demo purposes
 blModalTitle.appendChild(blModalTitleContent);
 blModalTitle.appendChild(blModalTitleSmall);
 blIntroContent.appendChild(blModalTitle);

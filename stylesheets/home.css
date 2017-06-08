@@ -245,6 +245,7 @@ h1, h2, h3 {
 	padding: 1rem 1.25rem;
 	border: 1px solid #1BA9D0;
 	border-radius: 3px;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.125) inset;
 	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', Arial, sans-serif;
 	font-size: 18px;
 	-webkit-appearance: none;
@@ -558,11 +559,11 @@ h1, h2, h3 {
 	}
 	#bl-mkt-login {
 		position: absolute;
-		top: 1.5rem;
+		top: 1.65rem;
 		right: 1.5rem;
 		/*background: none;*/
 		/*box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) inset;*/
-		font-weight: bold;
+		/*font-weight: bold;*/
 	}
 	#bl-mkt-main {
 		padding: 0 1.5rem;
@@ -642,6 +643,14 @@ h1, h2, h3 {
 	}
 	#bl-mkt-main-sub {
 		font-size: 20px;
+	}
+	/* hide demo note from small screens */
+	#bl-modal-title-content--demo {
+		display: none !important;
+	}
+	/* adjust title for small screens */
+	#bl-modal-title-content {
+		padding-right: 40px !important;
 	}
 }
 
@@ -864,6 +873,16 @@ h1, h2, h3 {
 	font-family: 'franklingothic-demi', 'Helvetica', Arial, sans-serif !important;
 	font-weight: normal !important;
 }*/
+#bl-modal-title-content--demo {
+	background: #F2EF83;
+	margin: -1.85rem -1.875rem 1.5rem !important;
+	padding: 1.5rem 1.875rem !important;
+	border-radius: 3px 3px 0 0 !important;
+	line-height: 1.2 !important;
+}
+.is-mobile-device #bl-modal-title-content--demo {
+	padding-right: 5rem !important;
+}
 
 @keyframes blRotate {
 	0% {
