@@ -77,7 +77,7 @@ h1, h2, h3 {
 	display: block;
 	position: relative;
 	z-index: 4;
-	max-width: 115px;
+	max-width: 150px;
 	margin: 0 auto 20vh;
 }
 #bl-mkt-login {
@@ -555,6 +555,7 @@ h1, h2, h3 {
 		padding-top: .5rem;
 	}
 	#bl-mkt-logo {
+		max-width: 115px;
 		margin: 0;
 	}
 	#bl-mkt-login {
