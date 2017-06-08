@@ -646,7 +646,7 @@ h1, h2, h3 {
 		font-size: 20px;
 	}
 	/* hide demo note from small screens */
-	#bl-modal-title-content--demo {
+	#bl-modal-title-content-demo {
 		display: none !important;
 	}
 	/* adjust title for small screens */
@@ -874,16 +874,6 @@ h1, h2, h3 {
 	font-family: 'franklingothic-demi', 'Helvetica', Arial, sans-serif !important;
 	font-weight: normal !important;
 }*/
-#bl-modal-title-content--demo {
-	background: #F2EF83;
-	margin: -1.85rem -1.875rem 1.5rem !important;
-	padding: 1.5rem 1.875rem !important;
-	border-radius: 3px 3px 0 0 !important;
-	line-height: 1.2 !important;
-}
-.is-mobile-device #bl-modal-title-content--demo {
-	padding-right: 5rem !important;
-}
 
 @keyframes blRotate {
 	0% {
