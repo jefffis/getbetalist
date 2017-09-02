@@ -579,8 +579,7 @@ h1, h2, h3 {
 #bl-mkt-more-cta-wrapper p {
   font-size: 25px;
 }
-.bl-mkt-submit-btn:link,
-.bl-mkt-submit-btn:visited {
+.bl-mkt-submit-btn {
   display: block;
   background: #F4610B;
   max-width: 280px;
@@ -589,7 +588,7 @@ h1, h2, h3 {
   padding: .85rem 1.25rem;
   border-radius: 3px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: white !important;
   cursor: pointer;
   font-family: inherit;
   font-size: 20px;
@@ -601,6 +600,9 @@ h1, h2, h3 {
   opacity: 1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
   color: rgba(255,255,255,0.75);
+}
+.margin-bottom {
+  margin-bottom: 3rem;
 }
 #bl-mkt-demo {
   margin-top: 1.5rem;
@@ -634,6 +636,7 @@ h1, h2, h3 {
   }
   #bl-mkt-logo.normal-margin {
     top: .75rem;
+    margin-bottom: 0;
   }
   #bl-mkt-pricing {
     padding: 1.5rem;
@@ -738,9 +741,11 @@ h1, h2, h3 {
     max-width: 150px;
     margin: 0;
   }
-  .bl-mkt-submit-btn:link,
-  .bl-mkt-submit-btn:visited {
+  .bl-mkt-submit-btn {
     max-width: 100%;
+  }
+  .margin-bottom {
+    margin-bottom: 0;
   }
 }
 
