@@ -645,7 +645,14 @@ h1, h2, h3 {
   #bl-mkt-pricing h2 {
     position: static;
     float: none;
-    padding: 0 0 1rem;
+    width: 100%;
+    padding: 0 0 .5rem;
+  }
+  #bl-mkt-pricing h2 span {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    left: -11px;
   }
   #bl-mkt-form-wrapper.in-pricing {
     padding-top: 2rem;
