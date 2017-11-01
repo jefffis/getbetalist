@@ -112,6 +112,7 @@ h1, h2, h3 {
   position: relative;
   top: -5px;
   font-size: 30px;
+  font-weight: normal;
 }
 #bl-mkt-pricing h2 span {
   display: block;
