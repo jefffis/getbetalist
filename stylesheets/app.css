@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'franklingothic';
-    src: url('/fonts/franklingothic-book-webfont.woff2') format('woff2'),
-         url('/fonts/franklingothic-book-webfont.woff') format('woff');
+    src: url('../fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'franklingothic';
-    src: url('/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
-         url('/fonts/franklingothic-demi-webfont.woff') format('woff');
+    src: url('../fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-demi-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
