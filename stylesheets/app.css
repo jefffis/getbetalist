@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'franklingothic';
-    src: url('http://wtf.jefff.co/getbetalist/fonts/franklingothic-book-webfont.woff2') format('woff2'),
-         url('http://wtf.jefff.co/getbetalist/fonts/franklingothic-book-webfont.woff') format('woff');
+    src: url('/fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('/fonts/franklingothic-book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'franklingothic';
-    src: url('http://wtf.jefff.co/getbetalist/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
-         url('http://wtf.jefff.co/getbetalist/fonts/franklingothic-demi-webfont.woff') format('woff');
+    src: url('/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('/fonts/franklingothic-demi-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -66,7 +66,7 @@ h1, h2, h3 {
     z-index: 1;
     height: 30px;
     width: 30px;
-    background: white url(http://wtf.jefff.co/getbetalist/images/down.png) no-repeat center;
+    background: white url(/images/down.png) no-repeat center;
     background-size: 14px;
     margin-top: -15px;
     margin-left: -15px;
@@ -141,7 +141,7 @@ h1, h2, h3 {
   left: 0;
   height: 1rem;
   width: 1rem;
-  background: url(http://wtf.jefff.co/getbetalist/images/checkmark--green.png) no-repeat center;
+  background: url(/images/checkmark--green.png) no-repeat center;
   background-size: 16px;
   margin-top: -.45rem;
   content: "";
@@ -200,7 +200,7 @@ h1, h2, h3 {
 
 #bl-mkt-main {
   position: relative;
-  /*background: url(http://wtf.jefff.co/getbetalist/images/back-image.png) no-repeat top center;*/
+  /*background: url(/images/back-image.png) no-repeat top center;*/
   /*background-size: 900px;*/
   /*padding-top: 400px;*/
   /*max-width: 500px;
@@ -307,7 +307,7 @@ h1, h2, h3 {
   opacity: 0;
   height: 1rem;
   width: 1rem;
-  background: url(http://wtf.jefff.co/getbetalist/images/checkmark--green.png) no-repeat center;
+  background: url(/images/checkmark--green.png) no-repeat center;
   background-size: 16px;
   margin-top: -.45rem;
   content: "";
@@ -777,7 +777,7 @@ h1, h2, h3 {
     z-index: 1;
     height: 100%;
     width: 100%;
-    background: url(http://wtf.jefff.co/getbetalist/images/back-image.png) no-repeat top center;
+    background: url(/images/back-image.png) no-repeat top center;
     background-size: 900px;
     content: "";
   }
