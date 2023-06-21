@@ -66,7 +66,7 @@ h1, h2, h3 {
     z-index: 1;
     height: 30px;
     width: 30px;
-    background: white url(/images/down.png) no-repeat center;
+    background: white url(../images/down.png) no-repeat center;
     background-size: 14px;
     margin-top: -15px;
     margin-left: -15px;
@@ -200,8 +200,8 @@ h1, h2, h3 {
 
 #bl-mkt-main {
   position: relative;
-  /*background: url(/images/back-image.png) no-repeat top center;*/
-  /*background-size: 900px;*/
+  background: url(../images/back-image.png) no-repeat top center;
+  background-size: 900px;
   /*padding-top: 400px;*/
   /*max-width: 500px;
   margin: auto;*/
